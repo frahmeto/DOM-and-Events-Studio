@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', () =>{
         shuttleBackground.style.backgroundColor = "green";
         returnToOriginalPosition();
     });
-
+    // When the "Abort Mission" button is clicked
     const missionAbortHandler = () =>{
         const abortConfirmation =  window.confirm("Confirm that you want to abort the mission.");
         if(abortConfirmation){
@@ -52,7 +52,7 @@ window.addEventListener('DOMContentLoaded', () =>{
     }
 }
     missionAbortButton.addEventListener('click',missionAbortHandler);
-
+// When the "Abort Mission" button is clicked
     upButton.addEventListener('click', () =>{
         height += 10000;
         rocket.style.bottom =`${height / 1000}px`;
@@ -74,12 +74,11 @@ window.addEventListener('DOMContentLoaded', () =>{
         rocket.style.left =`${left}px`;
 
     });
-
+// Return the rocket to its original position on the background when it has been landed or the mission was aborted.
     const returnToOriginalPosition = () => {
         rocket.style.left = "-23px";
         rocket.style.bottom = "-6px";
     }
-
 
 
 });
